@@ -1,31 +1,21 @@
 describe('Test runner', function () {
 
-	angular.mock.module.sharedInjector();
+	beforeEach(angular.mock.module('app'));
 
-	beforeAll(function () {
-		angular.mock.module('app');
-	});
-
-	for (var i = 0; i < 10000; i++) {
+	for (var i = 0; i < 1000; i++) {
 		describe('Test case', function () {
-			var scope,
-				$rootScope;
+			var $rootScope;
 
 			beforeEach(function () {
 				angular.mock.inject(function (_$rootScope_, $compile) {
 					$rootScope = _$rootScope_;
-					scope = $rootScope.$new();
-					$compile('<div date-picker></div>')(scope);
+					$compile('<div date-picker></div>')($rootScope);
 					$rootScope.$digest();
 				});
 			});
 
-			afterEach(function () {
-				$rootScope.$destroy();
-			});
-
 			it('Should create scope', function () {
-				expect(scope.value).toEqual('Hello, World!');
+				expect($rootScope.value).toEqual('Hello, World!');
 			});
 		});
 	}

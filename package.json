@@ -32,6 +32,7 @@
   "scripts": {
     "angular-copy": "karma start ./AngularCopyExample/WithAngularCopy/karma.conf.js",
     "utility-copy": "karma start ./AngularCopyExample/WithUtilityCopy/karma.conf.js",
+    "jquery-without-plugin": "karma start ./jQueryPluginExample/WithoutPlugin/karma.conf.js",
     "jquery-with-cleanup": "karma start ./jQueryPluginExample/WithCleanup/karma.conf.js",
     "jquery-without-cleanup": "karma start ./jQueryPluginExample/WithoutCleanup/karma.conf.js",
     "with-shared-injector": "karma start ./SharedInjectorExample/WithSharedInjector/karma.conf.js",
