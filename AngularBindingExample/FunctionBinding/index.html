@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Angular Function Binding Benchmark.js test</title>
+    </head>
+    <body>
+        <script src="dist/bundle.js"></script>
+        <div ng-app="test">
+            <span ng-controller="FunctionCtrl" id="Function">
+                <div>
+                    Details
+                    <div ng-repeat="item in platforms">
+                        <div ng-bind="item"></div>
+                    </div>
+                </div>
+                <div>
+                    Speed: <div ng-bind="performance"></div>
+                </div>
+                <span ng-if="showDiv()">Visible</span>
+            </span>
+        </div>
+    </body>
+</html>

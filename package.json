@@ -12,9 +12,11 @@
   "license": "MIT",
   "dependencies": {
     "angular": "1.5.7",
+    "benchmark": "2.1.3",
     "jquery": "3.0.0",
     "jquery-ui": "1.10.5",
-    "lodash": "^4.13.1"
+    "lodash": "4.13.1",
+    "platform": "1.3.3"
   },
   "devDependencies": {
     "angular-mocks": "1.5.7",
@@ -27,7 +29,9 @@
     "karma-phantomjs2-launcher": "^0.5.0",
     "karma-requirejs": "^1.0.0",
     "phantomjs2": "^2.2.0",
-    "requirejs": "^2.2.0"
+    "requirejs": "^2.2.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "1.16.3"
   },
   "scripts": {
     "angular-copy": "karma start ./AngularCopyExample/WithAngularCopy/karma.conf.js",
@@ -36,6 +40,8 @@
     "jquery-with-cleanup": "karma start ./jQueryPluginExample/WithCleanup/karma.conf.js",
     "jquery-without-cleanup": "karma start ./jQueryPluginExample/WithoutCleanup/karma.conf.js",
     "with-shared-injector": "karma start ./SharedInjectorExample/WithSharedInjector/karma.conf.js",
-    "without-shared-injector": "karma start ./SharedInjectorExample/WithoutSharedInjector/karma.conf.js"
+    "without-shared-injector": "karma start ./SharedInjectorExample/WithoutSharedInjector/karma.conf.js",
+    "function-binding": "node_modules/.bin/webpack-dev-server --config ./AngularBindingExample/FunctionBinding/webpack.config.js --open",
+    "variable-binding": "node_modules/.bin/webpack-dev-server --config ./AngularBindingExample/VariableBinding/webpack.config.js --open"
   }
 }
